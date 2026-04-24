@@ -46,7 +46,7 @@ This project was developed by a dedicated team at **Misr University for Science 
 
 * **[Abdelrahman Elissawi](https://github.com/YourUsername)** - *AI Engineer & Lead Developer*
     * Responsible for AI Model training, GUI Architecture, and Firmware optimization.
-* **[اسم الزميل الأول]** - *Role (e.g., IoT & Firmware Engineer)*
+* **[https://github.com/Emmy-Elsawy]** - *Role (e.g., IoT & Firmware Engineer)*
     * Developed the sensor integration and UDP communication protocols.
 * **[اسم الزميل الثاني]** - *Role (e.g., Mechanical Design & Robotics)*
     * Responsible for the robotic car chassis and hardware assembly.
