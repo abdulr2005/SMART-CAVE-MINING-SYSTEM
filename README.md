@@ -38,14 +38,15 @@ This project was a collaborative effort by students at **Misr University for Sci
 > *Focus: AI Architecture, Software Development & Systems Integration*
 * **AI Development**: Trained and deployed the YOLOv8 models for PPE and Gemstone modules.
 * **GUI Engineering**: Designed and programmed the entire PyQt6 Dashboard, including telemetry visualization and UDP networking.
-* **System Orchestration**: Defined the UDP communication protocol across all nodes.
 
-### 🛠️ Hardware & IoT Collaborators
+
+### 👑 Project Leader & Hardware & IoT Collaborators
 **[Eman Elsawy (Emmy)](https://github.com/Emmy-Elsawy)**
 > *Focus: Hardware Implementation & IoT Support*
 * **Hardware Design**: Led the implementation and assembly of the system's hardware components (ESP32 nodes, Sensors, and Car chassis).
 * **Firmware Support**: Contributed to the development of the
 * **Environment Node** firmware and sensor calibration.
+* * **System Orchestration**: Defined the UDP communication protocol across all nodes.
 
 ---
 
