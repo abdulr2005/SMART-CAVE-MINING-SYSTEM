@@ -1,0 +1,5 @@
+train: train/images
+val: valid/images
+
+nc: 11  # العدد الإجمالي للأصناف في الصورة
+names: ['Person', 'boots', 'gloves', 'Person', 'helmet', 'gloves', 'no_boots', 'no_gloves', 'vest', 'no_helmet', 'none']
