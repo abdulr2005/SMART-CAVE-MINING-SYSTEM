@@ -40,7 +40,7 @@ This project was a collaborative effort by students at **Misr University for Sci
 * **GUI Engineering**: Designed and programmed the entire PyQt6 Dashboard, including telemetry visualization and UDP networking.
 
 
-### Hardware & IoT Collaborators
+### 👑 Project Leader & Hardware & IoT Collaborators
 **[Eman Elsawy (Emmy)](https://github.com/Emmy-Elsawy)**
 > *Focus: Hardware Implementation & IoT Support*
 * **Hardware Design**: Led the implementation and assembly of the system's hardware components (ESP32 nodes, Sensors, and Car chassis).
