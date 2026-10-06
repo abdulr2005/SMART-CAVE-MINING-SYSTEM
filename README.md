@@ -1,63 +1,60 @@
+# ⛏️ SMART CAVE Mining System — AIoT Industrial Safety Platform
 
-# 🛰️ VisionOS Pro v2: AIoT Intelligence & Industrial Monitoring System
+An integrated **AI + IoT + robotics** system designed for smart mining environments. The project combines real-time computer vision, distributed ESP32 sensor nodes, robotic control, UDP networking, and a PyQt6 monitoring dashboard.
 
-## 📝 Project Overview
-**VisionOS Pro v2** is a high-performance **AIoT (Artificial Intelligence of Things)** ecosystem designed for industrial safety and automated environment monitoring. The system integrates real-time computer vision (YOLOv8) with a distributed sensor network (ESP32) and a mobile robotic unit, all orchestrated through a centralized **HQ Node** and a **PyQt6 Professional Dashboard**.
+## 🎯 Project Goal
+Create a prototype industrial monitoring system capable of observing environmental conditions, detecting safety events, supporting computer-vision analysis, and coordinating hardware nodes from a centralized command interface.
 
----
+## 🧩 System Architecture
+The system follows a hub-and-spoke architecture over a private Wi-Fi network using UDP communication.
 
-## 🏛️ System Architecture & Workflow
-The system operates on a "Hub-and-Spoke" network topology where all nodes connect via a private WiFi network (**HQ_Network**) using the **UDP Protocol** on Port `4210`.
+### 🖥️ Central Monitoring Dashboard
+Built with **Python + PyQt6** to provide:
+- Live environmental telemetry
+- Alert history and danger-state monitoring
+- Computer-vision inference
+- Manual robotic control
+- Command transmission between system nodes
 
-### 🖥️ 1. Central Command: Professional GUI (Lead Software)
-The GUI is the brain of the system, handling high-level logic and data processing:
-* **Dual-Core AI Inference**: Performs real-time YOLOv8 detection for PPE compliance and Gemstone analysis.
-* **Live Telemetry**: Visualizes environmental data (Temp, Humidity, Gas) using interactive sparklines.
-* **Control Interface**: Features a full D-Pad for manual car override and custom command transmission.
-* **Alert Engine**: Processes danger states (QUAKE, GAS, HEAT) and logs them into a dedicated alert history.
+### 👁️ Computer Vision
+The AI layer uses **YOLOv8** for real-time visual detection tasks, including PPE-related detection and gemstone analysis.
 
-### 📡 2. Networking Hub: HQ Node (ESP32)
-* **Role**: Acts as the central Access Point and UDP message broker.
-***Safety Logic**: Automatically activates physical actuators (Relays for fans, Buzzers for alarms) when danger signals are received from the environment node.
+### 📡 HQ Node — ESP32
+Acts as the central networking hub and coordinates messages between distributed nodes. It can also trigger connected actuators such as alarms and relays in response to safety events.
 
-### 🌡️ 3. Sensory Unit: ENV Node (ESP32)
-* **Role**: Monitors critical environmental factors and determines the system's "Safety State" based on a priority queue.
-* **Priority Logic**: QUAKE (Highest) > ALL > GAS > HEAT > FLOOD > SAFE.
+### 🌡️ Environment Node — ESP32
+Monitors environmental conditions such as temperature, humidity, gas, and other safety states.
 
-### 🏎️ 4. Robotic Unit: Car Node (ESP32)
-* **Autonomous Safety**: Uses an Ultrasonic sensor to detect obstacles and trigger an emergency stop.
-* **Precision Movement**: Implements IR sensor debounce logic to maintain stability during line tracking.
+### 🤖 Robotic Unit
+A mobile ESP32-based unit supports obstacle detection, emergency stopping, line tracking, and manual control from the central dashboard.
 
----
+## 🛠️ Tech Stack
+**Python · YOLOv8 · OpenCV · PyQt6 · ESP32 · Arduino/C++ · UDP Networking · Computer Vision · IoT · Robotics**
 
-## 👥 Meet The Team
-This project was a collaborative effort by students at **Misr University for Science and Technology (MUST)**, led by **Abdelrahman Elissawi**.
+## 📂 Repository Structure
+- `AI_models/` — AI-related assets and models
+- `CAR_CODE/` — robotic unit firmware/code
+- `ENVI_CODE/` — environmental monitoring node
+- `HQ_CODE/` — central networking node
+- `project_gui/` — desktop monitoring interface
 
-### 👑 Project Leader & Lead Software Engineer
-**[Abdelrahman Elissawi](https://github.com/YourUsername)**
-> *Focus: AI Architecture, Software Development & Systems Integration*
-* **AI Development**: Trained and deployed the YOLOv8 models for PPE and Gemstone modules.
-* **GUI Engineering**: Designed and programmed the entire PyQt6 Dashboard, including telemetry visualization and UDP networking.
+## 🚀 Setup
+Install the Python dependencies:
 
+```bash
+pip install ultralytics opencv-python PyQt6 numpy
+```
 
-### 👑 Project Leader & Hardware & IoT Collaborators
-**[Eman Elsawy (Emmy)](https://github.com/Emmy-Elsawy)**
-> *Focus: Hardware Implementation & IoT Support*
-* **Hardware Design**: Led the implementation and assembly of the system's hardware components (ESP32 nodes, Sensors, and Car chassis).
-* **Firmware Support**: Contributed to the development of the
-* **Environment Node** firmware and sensor calibration.
-* * **System Orchestration**: Defined the UDP communication protocol across all nodes.
+Flash the corresponding firmware to the ESP32 nodes, connect the computer to the system network, and run the GUI from the project interface code.
 
----
+## 👥 Team
+Developed as a collaborative student project at **Misr University for Science and Technology (MUST)**.
 
-## 🔧 Installation & Usage
-1.  **Flash Firmware**: Upload the `.ino` files to their respective ESP32 boards (HQ, ENV, and Car).
-2.  **Environment Setup**:
-    ```bash
-    pip install ultralytics opencv-python PyQt6 numpy
-    ```
-3.  **Run**: Execute `python main_gui_v_2.py` and ensure your PC is connected to the `HQ_Network`.
+**Abdulrahman Elissawi** — Project Lead / AI & Software  
+Focus: AI architecture, YOLOv8 integration, GUI development, networking, and system integration.
+
+**Eman Elsawy (Emmy)** — Hardware & IoT  
+Focus: hardware implementation, ESP32 nodes, sensors, firmware support, and system integration.
 
 ---
-
-.
+**Portfolio focus:** AIoT · Computer Vision · Embedded Systems · Robotics · Industrial Safety
